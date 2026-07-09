@@ -1,0 +1,20 @@
+{
+  "account_name": "example-brand",
+  "website_id": "123",
+  "channel": "Meta Paid",
+  "ad_account_id": "0000000000",
+  "currency": "EUR",
+  "targets": {
+    "target_cac": null,
+    "target_roas": null,
+    "source": "kickbite | local"
+  },
+  "thresholds": {
+    "cac_change_pct_threshold": 5,
+    "kill_cac_multiplier": 2,
+    "kill_min_spend_for_cac_kill": 30,
+    "kill_zero_conv_spend_gate": 15,
+    "scale_step_pct": 20,
+    "cut_step_pct": 20
+  }
+}

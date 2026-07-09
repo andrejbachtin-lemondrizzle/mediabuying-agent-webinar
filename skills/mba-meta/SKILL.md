@@ -40,7 +40,9 @@ Search, in this order, for a brand config (a JSON file with account_name, ad_acc
 A path the user explicitly names.
 Any file matching *.config.json in the current working directory.
 Any file matching *.config.json under this skill's own assets/ folder, excluding config.example.json.
-If step 3 turns up exactly one match, treat it as the active brand and proceed — do not ask for confirmation, since there's no ambiguity to resolve. Only stop and ask the user if step 3 turns up zero matches (no brand configured — need one) or more than one (need to disambiguate which brand).
+If step 3 turns up exactly one match, treat it as the active brand and proceed — do not ask for confirmation, since there's no ambiguity to resolve. If step 3 turns up more than one match, stop and ask the user which brand they mean — never guess based on recency.
+
+If step 3 turns up zero matches, no brand is configured yet. Do not ask an ad-hoc question yourself — invoke the `mba-onboarding` skill instead. It resolves the Meta ad account and Kickbite market/store together, collects targets and thresholds, and writes the config file. Wait for it to finish, then re-resolve the config (it will now find exactly one match) and continue to Step 1.
 
 Config fields:
 

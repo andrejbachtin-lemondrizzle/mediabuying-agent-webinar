@@ -32,8 +32,12 @@ owns writing this run's entry to the shared `log.json` (see Step 8) —
 1. Look for a config file (pointed at by the user, sitting in the working
    folder, or already resolved earlier in the conversation by
    `mba-meta`). See `assets/config.example.json` for the shape.
-2. If none exists, ask the user which brand/market they mean, then call
-   `kickbite_list_markets` to resolve the name to a `website_id`.
+2. If none exists, do not ask an ad-hoc question yourself — invoke the
+   `mba-onboarding` skill instead. It resolves the Meta ad account and
+   Kickbite market/store together (calling `kickbite_list_markets` as part
+   of that), collects targets and thresholds, and writes the config file.
+   Wait for it to finish, then re-resolve the config and continue from
+   here.
 3. Read `website_id` and `channel` from the config (`channel` defaults to
    `"Meta Paid"` if the config omits it — this skill is Meta-specific).
 4. Read the four kill/recommendation thresholds from `config.thresholds`.
