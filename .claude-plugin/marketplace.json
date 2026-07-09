@@ -1,9 +1,9 @@
 {
   "name": "kickbite-media-buying",
   "owner": {
-    "name": "Kickbite"
+    "name": "lemon drizzle"
   },
-  "description": "Kickbite's internal Meta media buying agent plugin.",
+  "description": "Kickbite's Meta media buying agent for showcasing in webinars.",
   "plugins": [
     {
       "name": "media-buying-agent",
