@@ -1,0 +1,10 @@
+# Real client run data — never commit
+log.json
+*.config.json
+
+# OS / editor junk
+.DS_Store
+._*
+
+# Local Claude Code state
+.claude/

@@ -1,0 +1,14 @@
+{
+  "name": "kickbite-media-buying",
+  "owner": {
+    "name": "Kickbite"
+  },
+  "description": "Kickbite's internal Meta media buying agent plugin.",
+  "plugins": [
+    {
+      "name": "media-buying-agent",
+      "source": "./",
+      "description": "Meta paid social performance review and budget/kill execution workflow, driven by a per-brand config file."
+    }
+  ]
+}
